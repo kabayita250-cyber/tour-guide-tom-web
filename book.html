@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Now | Tom Tour Guide Lake Kivu Adventures</title>
+<meta name="description" content="Book water sports and adventure tours on Lake Kivu. Instant WhatsApp confirmation. Jet ski, kayaking, speed boat and more.">
+<meta name="keywords" content="Lake Kivu tours, jet ski Rwanda, kayaking Lake Kivu, speed boat Rubavu, water sports Rwanda, Tom Tour Guide">
+<meta property="og:title" content="Book Now | Tom Tour Guide Lake Kivu Adventures">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;0,900;1,400&family=Jost:wght@300;400;500;600;700&display=swap');
+:root{--dark:#050e1a;--navy:#071628;--teal:#0d7a8a;--teal2:#12a0b5;--gold:#c9a84c;--gold2:#e8c96a;--white:#f8fafc;--gray:#8899aa;--gray2:#64748b;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);--card:rgba(255,255,255,0.04);--radius:10px;--radius-sm:6px;--font-h:'Cormorant Garamond',serif;--font-b:'Jost',sans-serif;--trans:all 0.25s ease;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-b);background:var(--dark);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+img{display:block;max-width:100%;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+button{cursor:pointer;font-family:var(--font-b);border:none;outline:none;}
+input,select,textarea{font-family:var(--font-b);outline:none;}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:var(--navy);}::-webkit-scrollbar-thumb{background:var(--teal);border-radius:3px;}
+.con{max-width:1200px;margin:0 auto;padding:0 24px;}
+.sec{padding:72px 0;}
+/* TOPBAR */
+.topbar{background:var(--gold);padding:7px 0;font-size:.76rem;font-weight:600;color:#050e1a;}
+.topbar .con{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;}
+.topbar a{color:#050e1a;font-weight:700;}
+.tb-links{display:flex;gap:20px;}
+/* HEADER */
+.hdr{position:sticky;top:0;z-index:200;background:rgba(5,14,26,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.hdr.scrolled{box-shadow:0 4px 30px rgba(0,0,0,.5);}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:13px 0;}
+.logo{display:flex;align-items:center;gap:10px;}
+.logo-t{line-height:1.15;}
+.logo-m{font-family:var(--font-h);font-size:1rem;font-weight:700;color:var(--gold);display:block;}
+.logo-s{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gray);display:block;}
+.nav{display:flex;align-items:center;gap:2px;}
+.nav a{padding:8px 13px;font-size:.83rem;font-weight:500;color:var(--gray);border-radius:6px;transition:var(--trans);}
+.nav a:hover,.nav a.on{color:var(--white);}
+.nav a.on{color:var(--gold);}
+.hdr-cta{display:flex;gap:10px;align-items:center;flex-shrink:0;}
+.ham{display:none;flex-direction:column;gap:5px;padding:6px;background:none;border:none;cursor:pointer;}
+.ham span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:var(--trans);}
+.mob-nav{display:none;background:var(--navy);border-top:1px solid var(--border);padding:12px 16px;}
+.mob-nav.open{display:block;}
+.mob-nav ul{display:flex;flex-direction:column;gap:2px;}
+.mob-nav a{display:block;padding:11px 14px;color:var(--gray);font-size:.88rem;border-radius:6px;transition:var(--trans);border-bottom:1px solid var(--border);}
+.mob-nav a:hover{color:var(--white);background:var(--card);}
+.mob-nav .btn{width:100%;justify-content:center;margin-top:10px;}
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:var(--radius-sm);font-size:.87rem;font-weight:600;letter-spacing:.03em;transition:var(--trans);cursor:pointer;border:none;white-space:nowrap;}
+.btn-g{background:var(--gold);color:#050e1a;}
+.btn-g:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 10px 28px rgba(201,168,76,.3);}
+.btn-t{background:var(--teal);color:#fff;}
+.btn-t:hover{background:var(--teal2);transform:translateY(-2px);}
+.btn-o{background:transparent;color:var(--white);border:1px solid var(--border2);}
+.btn-o:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
+.btn-wa{background:#25d366;color:#fff;}
+.btn-wa:hover{background:#20c05c;transform:translateY(-2px);}
+.btn-sm{padding:8px 16px;font-size:.8rem;}
+.btn-lg{padding:15px 34px;font-size:.93rem;}
+/* WA FLOAT */
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:300;display:flex;align-items:center;gap:8px;background:#25d366;color:#fff;padding:12px 18px;border-radius:100px;font-size:.86rem;font-weight:700;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:var(--trans);}
+.wa-float:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(37,211,102,.5);}
+.wa-ft{display:inline;}
+/* CHAT */
+.chat-b{position:fixed;bottom:24px;left:24px;z-index:300;}
+.chat-tog{width:52px;height:52px;border-radius:50%;background:var(--teal);border:none;display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:#fff;cursor:pointer;box-shadow:0 4px 20px rgba(13,122,138,.4);transition:var(--trans);}
+.chat-tog:hover{transform:scale(1.1);}
+.chat-box{position:absolute;bottom:64px;left:0;width:295px;background:var(--navy);border:1px solid var(--border2);border-radius:14px;overflow:hidden;display:none;box-shadow:0 12px 48px rgba(0,0,0,.5);}
+.chat-box.open{display:block;animation:sup .3s ease;}
+@keyframes sup{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.chat-hd{background:var(--teal);padding:12px 14px;display:flex;align-items:center;gap:10px;}
+.chat-hd-n{font-weight:700;font-size:.88rem;}
+.chat-hd-s{font-size:.7rem;opacity:.8;}
+.chat-msgs{padding:12px;height:175px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;}
+.cm{padding:8px 12px;border-radius:10px;font-size:.81rem;line-height:1.5;max-width:88%;}
+.cm.bot{background:var(--card);align-self:flex-start;border-bottom-left-radius:2px;}
+.cm.usr{background:var(--teal);align-self:flex-end;border-bottom-right-radius:2px;}
+.chat-opts{padding:8px 10px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:5px;}
+.co{background:var(--card);border:1px solid var(--border);color:var(--white);padding:7px 11px;border-radius:7px;font-size:.79rem;text-align:left;cursor:pointer;font-family:var(--font-b);transition:var(--trans);}
+.co:hover{background:rgba(13,122,138,.2);border-color:var(--teal);}
+/* TRUST STRIP */
+.trust-strip{background:var(--navy);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:22px 0;}
+.trust-g{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.t-item{display:flex;align-items:center;gap:12px;font-size:.83rem;}
+.t-icon{font-size:1.5rem;flex-shrink:0;}
+.t-item strong{display:block;font-weight:700;color:var(--white);}
+.t-item span{color:var(--gray);font-size:.74rem;}
+/* FOOTER */
+.footer{background:#03090f;border-top:1px solid var(--border);}
+.footer-g{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;padding:56px 0 40px;}
+.foot-tag{color:var(--gray);font-size:.86rem;line-height:1.75;max-width:270px;margin:14px 0 18px;}
+.soc{display:flex;gap:8px;margin-bottom:18px;}
+.soc a{width:34px;height:34px;border-radius:7px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gray);font-size:.82rem;transition:var(--trans);}
+.soc a:hover{border-color:var(--gold);color:var(--gold);}
+.fc h4{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--white);margin-bottom:14px;}
+.fc ul{display:flex;flex-direction:column;gap:7px;}
+.fc ul a{color:var(--gray);font-size:.83rem;transition:var(--trans);}
+.fc ul a:hover{color:var(--gold);padding-left:4px;}
+.foot-bot{border-top:1px solid var(--border);padding:18px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:.76rem;color:var(--gray2);}
+.foot-bot a{color:var(--gold);}
+/* EYEBROW / SECTION TITLES */
+.ey{font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin-bottom:8px;}
+.h1{font-family:var(--font-h);font-size:clamp(2.8rem,8vw,6rem);font-weight:900;line-height:1;font-style:italic;}
+.h2{font-family:var(--font-h);font-size:clamp(1.8rem,4vw,3rem);font-weight:700;line-height:1.1;}
+.h3{font-family:var(--font-h);font-size:clamp(1.3rem,2.5vw,2rem);font-weight:700;}
+.sub{color:var(--gray);font-weight:300;line-height:1.8;max-width:540px;font-size:.93rem;margin-top:10px;}
+/* REVEAL */
+.rev{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease;}
+.rev.vis{opacity:1;transform:translateY(0);}
+/* FORM */
+.fi{width:100%;background:var(--card);border:1px solid var(--border);color:var(--white);padding:12px 15px;border-radius:var(--radius-sm);font-size:.88rem;transition:var(--trans);}
+.fi:focus{border-color:var(--gold);background:rgba(201,168,76,.04);}
+.fi::placeholder{color:var(--gray2);}
+.fl{display:block;font-size:.7rem;font-weight:600;color:var(--gray);margin-bottom:5px;letter-spacing:.08em;text-transform:uppercase;}
+.fs{width:100%;background:var(--card);border:1px solid var(--border);color:var(--white);padding:12px 38px 12px 15px;border-radius:var(--radius-sm);font-size:.88rem;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2394a3b8'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;background-size:18px;transition:var(--trans);cursor:pointer;}
+.fs:focus{border-color:var(--gold);}
+.fs option{background:var(--navy);}
+/* TOAST */
+.toast-c{position:fixed;bottom:90px;right:22px;z-index:9999;display:flex;flex-direction:column;gap:10px;}
+.toast{background:var(--navy);border:1px solid var(--border2);border-left:3px solid var(--gold);border-radius:6px;padding:12px 16px;display:flex;align-items:center;gap:10px;min-width:250px;box-shadow:0 12px 40px rgba(0,0,0,.5);animation:tin .3s ease;font-size:.85rem;}
+.toast.ok{border-left-color:#22c55e;}
+@keyframes tin{from{opacity:0;transform:translateX(20px);}to{opacity:1;transform:translateX(0);}}
+/* PAGE HERO */
+.ph{background:linear-gradient(135deg,#071628,#0c3251);padding:56px 0;border-bottom:1px solid var(--border);}
+.bc{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--gray2);margin-bottom:12px;}
+.bc a{color:var(--gray);}
+/* RESPONSIVE */
+@media(max-width:900px){.trust-g{grid-template-columns:1fr 1fr;}.footer-g{grid-template-columns:1fr 1fr;gap:28px;}}
+@media(max-width:768px){.nav,.hdr-cta .btn-o{display:none;}.ham{display:flex;}.wa-ft{display:none;}.wa-float{padding:13px;border-radius:50%;width:50px;height:50px;justify-content:center;}.tb-links{display:none;}}
+@media(max-width:560px){.trust-g,.footer-g{grid-template-columns:1fr;}.foot-bot{flex-direction:column;text-align:center;}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="con"><span>🌊 Lake Kivu Adventures · Rubavu, Rwanda · Open 7AM–7PM Daily</span>
+<div class="tb-links"><a href="tel:+250791750041">📞 +250 791 750 041</a><a href="mailto:Ishimwesalvator5@gmail.com">✉ Email Us</a></div></div></div>
+<header class="hdr" id="mainHdr"><div class="con"><div class="hdr-in">
+<a href="index.html" class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="42" height="42" style="flex-shrink:0">
+  <defs>
+    <clipPath id="cc"><circle cx="60" cy="60" r="56"/></clipPath>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87CEEB"/><stop offset="100%" stop-color="#b8e4f5"/></linearGradient>
+    <linearGradient id="wat" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a7fa8"/><stop offset="100%" stop-color="#0d5c7a"/></linearGradient>
+    <linearGradient id="m1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2d8a4e"/><stop offset="100%" stop-color="#1a5c32"/></linearGradient>
+    <linearGradient id="m2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3aab60"/><stop offset="100%" stop-color="#227840"/></linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="59" fill="#c9a84c"/>
+  <circle cx="60" cy="60" r="56" fill="#0d3d2a"/>
+  <g clip-path="url(#cc)">
+    <rect x="4" y="4" width="112" height="72" fill="url(#sky)"/>
+    <circle cx="85" cy="26" r="9" fill="#FFD700" opacity="0.9"/>
+    <polygon points="10,76 38,38 66,76" fill="#1a5c32"/>
+    <polygon points="4,76 28,42 52,76" fill="url(#m1)"/>
+    <polygon points="30,76 60,30 90,76" fill="url(#m2)"/>
+    <polygon points="62,76 88,45 116,76" fill="url(#m1)"/>
+    <polygon points="60,30 55,44 65,44" fill="white" opacity="0.85"/>
+    <rect x="4" y="72" width="112" height="30" fill="url(#wat)"/>
+    <path d="M10,78 Q35,74 60,78 Q85,82 110,78" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+    <path d="M42,72 Q60,68 78,72 L75,78 Q60,82 45,78 Z" fill="#ffffff"/>
+    <rect x="48" y="66" width="24" height="7" rx="2" fill="#e8e8e8"/>
+    <rect x="53" y="61" width="12" height="7" rx="1.5" fill="#ffffff"/>
+    <line x1="59" y1="61" x2="59" y2="53" stroke="#555" stroke-width="1"/>
+    <polygon points="59,53 67,56 59,59" fill="#c9a84c"/>
+  </g>
+  <circle cx="60" cy="60" r="56" fill="none" stroke="#c9a84c" stroke-width="2"/>
+  <path id="ta" d="M 15,60 A 45,45 0 0,1 105,60" fill="none"/>
+  <text font-family="Arial Black,sans-serif" font-size="9.5" font-weight="900" fill="#c9a84c" letter-spacing="2"><textPath href="#ta" startOffset="8%">TOM TOUR GUIDE</textPath></text>
+  <path id="ba" d="M 13,62 A 47,47 0 0,0 107,62" fill="none"/>
+  <text font-family="Arial,sans-serif" font-size="7.5" font-weight="700" fill="#ffffff" letter-spacing="1.5"><textPath href="#ba" startOffset="5%">LAKE KIVU ADVENTURE</textPath></text>
+  <circle cx="18" cy="60" r="2" fill="#c9a84c"/>
+  <circle cx="102" cy="60" r="2" fill="#c9a84c"/>
+</svg><div class="logo-t"><span class="logo-m">Tom Tour Guide</span><span class="logo-s">Lake Kivu Adventures</span></div></a>
+<ul class="nav"><li><a href="index.html" class="">Home</a></li><li><a href="experiences.html" class="">Experiences</a></li><li><a href="gallery.html" class="">Gallery</a></li><li><a href="book.html" class="on">Book Now</a></li><li><a href="faq.html" class="">FAQ</a></li></ul>
+<div class="hdr-cta"><a href="book.html" class="btn btn-g btn-sm">📅 Book Now</a><button class="ham" id="ham"><span></span><span></span><span></span></button></div>
+</div></div>
+<div class="mob-nav" id="mobNav"><ul><li><a href="index.html">Home</a></li><li><a href="experiences.html">Experiences</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="book.html">Book Now</a></li><li><a href="faq.html">FAQ</a></li></ul><a href="book.html" class="btn btn-g">📅 Book an Experience</a></div></header>
+<a href="https://wa.me/250791750041" class="wa-float" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-ft">Chat &amp; Book</span></a>
+<div class="chat-b"><button class="chat-tog" onclick="toggleChat()">💬</button>
+<div class="chat-box" id="chatBox">
+<div class="chat-hd"><span style="font-size:1.4rem">🌊</span><div><div class="chat-hd-n">Tom Tour Guide</div><div class="chat-hd-s">🟢 Online · Replies fast</div></div></div>
+<div class="chat-msgs" id="chatMsgs"><div class="cm bot">👋 Hi! Welcome to Lake Kivu Adventures. How can I help?</div></div>
+<div class="chat-opts" id="chatOpts">
+<button class="co" onclick="chatReply('prices')">💰 See prices</button>
+<button class="co" onclick="chatReply('book')">📅 How to book</button>
+<button class="co" onclick="chatReply('safe')">🛡️ Is it safe?</button>
+<button class="co" onclick="chatReply('location')">📍 Location</button>
+</div></div></div>
+<div id="toastC" class="toast-c"></div>
+
+<div class="ph"><div class="con"><div class="bc"><a href="index.html">Home</a> › <span>Book Now</span></div>
+<span class="ey">Reserve Your Spot</span><h1 class="h2">Book an Experience</h1>
+<p class="sub">Fill in your details and Tom will confirm your booking within a few hours via WhatsApp.</p>
+</div></div>
+<section class="sec"><div class="con">
+<div style="display:grid;grid-template-columns:1fr 360px;gap:36px;align-items:start;">
+<div class="rev">
+<div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:36px;" id="bookSection">
+<h3 style="font-family:var(--font-h);font-size:1.5rem;margin-bottom:24px">Send Booking Request</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:13px;">
+<div><label class="fl">Full Name *</label><input class="fi" type="text" id="b-name" placeholder="Your name"></div>
+<div><label class="fl">Phone / WhatsApp *</label><input class="fi" type="tel" id="b-phone" placeholder="+250 ..."></div>
+<div style="grid-column:1/-1"><label class="fl">Select Experience *</label>
+<select class="fs" id="b-service"><option value="">Choose an experience...</option>
+<option>🚤 Speed Boat – Rubavu to Karongi ($500)</option>
+<option>🚤 Speed Boat – Buraseri to Gisenyi ($150)</option>
+<option>🏄 Jet Ski – 1 Hour ($200)</option>
+<option>🏄 Jet Ski – 30 Minutes ($120)</option>
+<option>🛶 Kayaking – 1 Hour ($50)</option>
+<option>⛵ Luxury Pontoon Tour (ask for price)</option>
+<option>⛰️ Mountain Travel – Gishwati Forest ($800)</option>
+<option>🌙 Night Fishing Experience (ask for price)</option>
+<option>🥾 Congo Nile Hiking Trail (ask for price)</option>
+<option>👥 Custom Group Package (ask for price)</option>
+</select></div>
+<div><label class="fl">Preferred Date</label><input class="fi" type="date" id="b-date"></div>
+<div><label class="fl">Group Size</label>
+<select class="fs" id="b-pax"><option>1 person</option><option>2 people</option><option>3–5 people</option><option>6–10 people</option><option>10+ people</option></select></div>
+<div><label class="fl">Your Country</label><input class="fi" type="text" id="b-country" placeholder="Where are you from?"></div>
+<div><label class="fl">Email (optional)</label><input class="fi" type="email" placeholder="your@email.com"></div>
+<div style="grid-column:1/-1"><label class="fl">Special Requests</label><textarea class="fi" id="b-notes" style="min-height:85px;resize:vertical" placeholder="Any requests or questions..."></textarea></div>
+</div>
+<button class="btn btn-g" style="width:100%;justify-content:center;margin-top:14px;font-size:.92rem;padding:16px" onclick="submitBooking()">📅 Send Booking Request →</button>
+<div id="bookOk" style="display:none;margin-top:12px;background:rgba(13,122,138,.1);border:1px solid rgba(13,122,138,.3);border-radius:6px;padding:13px;color:#7de8f0;font-size:.87rem;text-align:center">✅ Sent! Tom will contact you on WhatsApp within a few hours.</div>
+</div></div>
+<div style="display:flex;flex-direction:column;gap:16px;" class="rev">
+<div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:22px">
+<h4 style="font-family:var(--font-h);font-size:1.1rem;margin-bottom:14px">💰 Quick Price Reference</h4>
+<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:.83rem"><span>🛶 Kayak 1hr</span><span style="color:var(--gold);font-weight:700">$50</span></div><div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:.83rem"><span>🏄 Jet Ski 30min</span><span style="color:var(--gold);font-weight:700">$120</span></div><div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:.83rem"><span>🏄 Jet Ski 1hr</span><span style="color:var(--gold);font-weight:700">$200</span></div><div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:.83rem"><span>🚤 Speed Boat (short)</span><span style="color:var(--gold);font-weight:700">$150</span></div><div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:.83rem"><span>🚤 Speed Boat (long)</span><span style="color:var(--gold);font-weight:700">$500</span></div><div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:.83rem"><span>⛰️ Gishwati Forest</span><span style="color:var(--gold);font-weight:700">$800</span></div><div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:.83rem"><span>🌙 Night Fishing</span><span style="color:var(--gold);font-weight:700">Ask Tom</span></div><div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:.83rem"><span>🥾 Congo Nile Trail</span><span style="color:var(--gold);font-weight:700">Ask Tom</span></div>
+</div>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:22px">
+<h4 style="font-family:var(--font-h);font-size:1.1rem;margin-bottom:14px">📋 How It Works</h4>
+<div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:12px"><div style="width:26px;height:26px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:800;flex-shrink:0;margin-top:2px">1</div><div><strong style="font-size:.84rem">Fill the form</strong><p style="font-size:.76rem;color:var(--gray);margin-top:2px">Name, phone, experience & date</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:12px"><div style="width:26px;height:26px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:800;flex-shrink:0;margin-top:2px">2</div><div><strong style="font-size:.84rem">Tom confirms</strong><p style="font-size:.76rem;color:var(--gray);margin-top:2px">Replies on WhatsApp within hours</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:12px"><div style="width:26px;height:26px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:800;flex-shrink:0;margin-top:2px">3</div><div><strong style="font-size:.84rem">Meet at the lake</strong><p style="font-size:.76rem;color:var(--gray);margin-top:2px">Tom sends exact GPS location</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:12px"><div style="width:26px;height:26px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:800;flex-shrink:0;margin-top:2px">4</div><div><strong style="font-size:.84rem">Enjoy! Pay on arrival</strong><p style="font-size:.76rem;color:var(--gray);margin-top:2px">Cash USD or RWF</p></div></div>
+</div>
+<div style="background:linear-gradient(135deg,#0d3b5e,#0e7a8a);border-radius:10px;padding:22px">
+<h4 style="font-size:1rem;font-weight:700;margin-bottom:10px">💬 Prefer WhatsApp?</h4>
+<p style="color:rgba(255,255,255,.7);font-size:.83rem;margin-bottom:14px">Chat directly with Tom for instant answers.</p>
+<a href="https://wa.me/250791750041" class="btn btn-wa" style="width:100%;justify-content:center" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Open WhatsApp</a>
+</div>
+</div>
+</div></div></section>
+<style>@media(max-width:900px){section .con>div[style*="grid-template-columns:1fr 360px"]{grid-template-columns:1fr!important}}</style>
+
+<div class="trust-strip"><div class="con"><div class="trust-g">
+<div class="t-item"><span class="t-icon">🛡️</span><div><strong>100% Safe</strong><span>Certified guides & life jackets</span></div></div>
+<div class="t-item"><span class="t-icon">📅</span><div><strong>Book in Minutes</strong><span>Via WhatsApp or online form</span></div></div>
+<div class="t-item"><span class="t-icon">⭐</span><div><strong>5-Star Rated</strong><span>Loved by tourists worldwide</span></div></div>
+<div class="t-item"><span class="t-icon">🌍</span><div><strong>Open Every Day</strong><span>7AM – 7PM · All year round</span></div></div>
+</div></div></div>
+<footer class="footer"><div class="con">
+<div class="footer-g">
+<div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="42" height="42" style="flex-shrink:0">
+  <defs>
+    <clipPath id="cc"><circle cx="60" cy="60" r="56"/></clipPath>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87CEEB"/><stop offset="100%" stop-color="#b8e4f5"/></linearGradient>
+    <linearGradient id="wat" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a7fa8"/><stop offset="100%" stop-color="#0d5c7a"/></linearGradient>
+    <linearGradient id="m1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2d8a4e"/><stop offset="100%" stop-color="#1a5c32"/></linearGradient>
+    <linearGradient id="m2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3aab60"/><stop offset="100%" stop-color="#227840"/></linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="59" fill="#c9a84c"/>
+  <circle cx="60" cy="60" r="56" fill="#0d3d2a"/>
+  <g clip-path="url(#cc)">
+    <rect x="4" y="4" width="112" height="72" fill="url(#sky)"/>
+    <circle cx="85" cy="26" r="9" fill="#FFD700" opacity="0.9"/>
+    <polygon points="10,76 38,38 66,76" fill="#1a5c32"/>
+    <polygon points="4,76 28,42 52,76" fill="url(#m1)"/>
+    <polygon points="30,76 60,30 90,76" fill="url(#m2)"/>
+    <polygon points="62,76 88,45 116,76" fill="url(#m1)"/>
+    <polygon points="60,30 55,44 65,44" fill="white" opacity="0.85"/>
+    <rect x="4" y="72" width="112" height="30" fill="url(#wat)"/>
+    <path d="M10,78 Q35,74 60,78 Q85,82 110,78" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+    <path d="M42,72 Q60,68 78,72 L75,78 Q60,82 45,78 Z" fill="#ffffff"/>
+    <rect x="48" y="66" width="24" height="7" rx="2" fill="#e8e8e8"/>
+    <rect x="53" y="61" width="12" height="7" rx="1.5" fill="#ffffff"/>
+    <line x1="59" y1="61" x2="59" y2="53" stroke="#555" stroke-width="1"/>
+    <polygon points="59,53 67,56 59,59" fill="#c9a84c"/>
+  </g>
+  <circle cx="60" cy="60" r="56" fill="none" stroke="#c9a84c" stroke-width="2"/>
+  <path id="ta" d="M 15,60 A 45,45 0 0,1 105,60" fill="none"/>
+  <text font-family="Arial Black,sans-serif" font-size="9.5" font-weight="900" fill="#c9a84c" letter-spacing="2"><textPath href="#ta" startOffset="8%">TOM TOUR GUIDE</textPath></text>
+  <path id="ba" d="M 13,62 A 47,47 0 0,0 107,62" fill="none"/>
+  <text font-family="Arial,sans-serif" font-size="7.5" font-weight="700" fill="#ffffff" letter-spacing="1.5"><textPath href="#ba" startOffset="5%">LAKE KIVU ADVENTURE</textPath></text>
+  <circle cx="18" cy="60" r="2" fill="#c9a84c"/>
+  <circle cx="102" cy="60" r="2" fill="#c9a84c"/>
+</svg><div style="display:flex;align-items:center;gap:8px;margin-top:10px;">
+<span style="font-family:var(--font-h);font-size:1rem;font-weight:700;color:var(--gold)">Tom Tour Guide</span>
+<span style="font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gray)">Lake Kivu Adventures</span></div>
+<p class="foot-tag">Professional water sports and adventure tours on the breathtaking shores of Lake Kivu, Rwanda. Safe, exciting, unforgettable.</p>
+<div class="soc">
+<a href="https://facebook.com" target="_blank">f</a>
+<a href="https://wa.me/250791750041" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<a href="mailto:Ishimwesalvator5@gmail.com">✉</a>
+</div></div>
+<div class="fc"><h4>Experiences</h4><ul>
+<li><a href="experiences.html">Speed Boat Rides</a></li>
+<li><a href="experiences.html">Jet Ski Rides</a></li>
+<li><a href="experiences.html">Kayaking</a></li>
+<li><a href="experiences.html">Night Fishing</a></li>
+<li><a href="experiences.html">Congo Nile Trail</a></li>
+<li><a href="experiences.html">Gishwati Mountain</a></li>
+</ul></div>
+<div class="fc"><h4>Quick Links</h4><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="experiences.html">Experiences</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="book.html">Book Now</a></li>
+<li><a href="faq.html">FAQ</a></li>
+</ul></div>
+<div class="fc"><h4>Contact</h4><ul>
+<li><a href="tel:+250791750041">📞 +250 791 750 041</a></li>
+<li><a href="mailto:Ishimwesalvator5@gmail.com">✉ Ishimwesalvator5@gmail.com</a></li>
+<li><a href="#">📍 Rubavu, Lake Kivu, Rwanda</a></li>
+<li><a href="https://wa.me/250791750041">💬 WhatsApp Us</a></li>
+</ul>
+<div style="margin-top:18px;padding:14px;background:var(--card);border:1px solid var(--border);border-radius:8px;">
+<p style="font-size:.7rem;color:var(--gray);text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px;font-weight:600">Newsletter</p>
+<div style="display:flex;gap:7px;">
+<input type="email" placeholder="your@email.com" class="fi" style="flex:1;padding:8px 11px;font-size:.78rem;">
+<button onclick="showToast('Subscribed! ✅','ok')" style="background:var(--gold);color:#050e1a;border:none;border-radius:5px;padding:8px 12px;cursor:pointer;font-weight:700;">→</button>
+</div></div></div>
+</div>
+<div class="foot-bot"><span>© 2025 Tom Tour Guide · Lake Kivu Adventures · Rubavu, Rwanda</span>
+<span>Built by <a href="#">INTARE TECHNOLOGIES</a></span></div>
+</div></footer>
+<script>
+// ── CHATBOT ──
+var chatOpen=false;
+function toggleChat(){chatOpen=!chatOpen;var b=document.getElementById('chatBox');if(b)b.classList.toggle('open',chatOpen);}
+var replies={
+  prices:'Our prices:\n🛶 Kayak – $50/hr\n🏄 Jet Ski – $120 (30min) / $200 (1hr)\n🚤 Speed Boat – $150–$500\n⛰️ Gishwati – $800\n🌙 Night Fishing & 🥾 Hiking – contact Tom',
+  book:'Fill the booking form on this page, or WhatsApp Tom at +250 791 750 041 — he replies very fast! 📲',
+  safe:'100% safe! 🛡️ All activities include life jackets, safety briefing and certified guides. Beginners & children welcome!',
+  location:'We are on the shores of Lake Kivu in Rubavu (Gisenyi), Western Rwanda — about 2.5 hrs from Kigali. GPS sent after booking! 📍'
+};
+function chatReply(k){
+  var msgs=document.getElementById('chatMsgs'),opts=document.getElementById('chatOpts');
+  if(!msgs||!opts)return;
+  opts.innerHTML='';
+  var labels={prices:'💰 Prices',book:'📅 Book',safe:'🛡️ Safety',location:'📍 Location'};
+  var u=document.createElement('div');u.className='cm usr';u.textContent=labels[k];msgs.appendChild(u);
+  setTimeout(function(){
+    var b=document.createElement('div');b.className='cm bot';b.style.whiteSpace='pre-line';b.textContent=replies[k];msgs.appendChild(b);
+    msgs.scrollTop=msgs.scrollHeight;
+    setTimeout(function(){
+      opts.innerHTML='<a href="https://wa.me/250791750041" class="co" target="_blank">💬 WhatsApp Tom</a><a href="#bookSection" class="co" onclick="toggleChat()">📝 Booking Form</a>';
+    },400);
+  },500);
+  msgs.scrollTop=msgs.scrollHeight;
+}
+// ── BOOKING ──
+function submitBooking(){
+  var n=document.getElementById('b-name'),ph=document.getElementById('b-phone'),sv=document.getElementById('b-service');
+  if(!n||!ph||!sv){return;}
+  var name=n.value.trim(),phone=ph.value.trim(),service=sv.value;
+  if(!name||!phone||!service){showToast('Please fill in your name, phone and experience.','err');return;}
+  var date=(document.getElementById('b-date')||{}).value||'';
+  var pax=(document.getElementById('b-pax')||{}).value||'';
+  var country=(document.getElementById('b-country')||{}).value||'';
+  var notes=(document.getElementById('b-notes')||{}).value||'';
+  var msg='Hello Tom! I would like to book an experience.%0A%0A';
+  msg+='*Name:* '+encodeURIComponent(name)+'%0A';
+  msg+='*Phone:* '+encodeURIComponent(phone)+'%0A';
+  msg+='*Experience:* '+encodeURIComponent(service)+'%0A';
+  if(pax) msg+='*Group:* '+encodeURIComponent(pax)+'%0A';
+  if(date) msg+='*Date:* '+encodeURIComponent(date)+'%0A';
+  if(country) msg+='*From:* '+encodeURIComponent(country)+'%0A';
+  if(notes) msg+='*Notes:* '+encodeURIComponent(notes);
+  var ok=document.getElementById('bookOk');if(ok)ok.style.display='block';
+  setTimeout(function(){window.open('https://wa.me/250791750041?text='+msg,'_blank');},700);
+}
+// ── TOAST ──
+function showToast(msg,type){
+  var c=document.getElementById('toastC');
+  if(!c){c=document.createElement('div');c.id='toastC';c.className='toast-c';document.body.appendChild(c);}
+  var icons={ok:'✅',err:'❌',i:'ℹ️'};
+  var t=document.createElement('div');t.className='toast '+(type==='ok'?'ok':'');
+  t.innerHTML='<span>'+(icons[type]||'ℹ️')+'</span><span>'+msg+'</span>';
+  c.appendChild(t);
+  setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(20px)';t.style.transition='all .3s';setTimeout(function(){t.remove();},300);},3200);
+}
+// ── REVEAL ──
+function initReveal(){
+  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});},{threshold:.07});
+  document.querySelectorAll('.rev').forEach(function(el){obs.observe(el);});
+}
+// ── HEADER SCROLL ──
+function initHeader(){
+  var h=document.getElementById('mainHdr');
+  if(h)window.addEventListener('scroll',function(){h.classList.toggle('scrolled',window.scrollY>50);});
+}
+// ── MOBILE NAV ──
+function initNav(){
+  var btn=document.getElementById('ham'),nav=document.getElementById('mobNav');
+  if(btn&&nav)btn.addEventListener('click',function(){nav.classList.toggle('open');});
+}
+// ── FAQ ──
+function initFAQ(){
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click',function(){q.closest('.faq-item').classList.toggle('open');});
+  });
+}
+document.addEventListener('DOMContentLoaded',function(){initReveal();initHeader();initNav();initFAQ();});
+</script>
+</body>
+</html>
